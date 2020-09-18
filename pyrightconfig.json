@@ -1,0 +1,16 @@
+{
+  "executionEnvironments": [
+    {
+      "root": "projects/graph"
+    },
+    {
+      "root": "projects/adventure"
+    },
+    {
+      "root": "projects/ancestor"
+    },
+    {
+      "root": "projects/social"
+    }
+  ]
+}
