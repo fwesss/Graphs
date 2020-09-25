@@ -128,7 +128,7 @@ class Graph:
                     new_path.append(neighbor)
                     to_visit.enqueue(new_path)
 
-    def dfs(self, starting_vertex: int, destination_vertex: int) -> List[int]:
+    def dfs(self, starting_vertex: int, destination_vertex: int) -> Optional[List[int]]:
         """
         return a list containing a path from
         starting_vertex to destination_vertex in
@@ -159,7 +159,7 @@ class Graph:
         destination_vertex: int,
         visited=set(),
         path=[],
-    ) -> List[int]:
+    ) -> Optional[List[int]]:
         """
         return a list containing a path from
         starting_vertex to destination_vertex in
