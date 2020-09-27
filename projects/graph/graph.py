@@ -167,13 +167,19 @@ class Graph:
 
         This should be done using recursion.
         """
-        visited.add(starting_vertex)
         new_path = path + [starting_vertex]
 
         if starting_vertex == destination_vertex:
             return new_path
 
-        for neighbor in self.get_neighbors(starting_vertex):
+        visited.add(starting_vertex)
+
+        neighbors = self.get_neighbors(starting_vertex)
+
+        if not len(neighbors):
+            return None
+
+        for neighbor in neighbors:
             if neighbor not in visited:
                 neighbor_path = self.dfs_recursive(
                     neighbor, destination_vertex, visited, new_path
